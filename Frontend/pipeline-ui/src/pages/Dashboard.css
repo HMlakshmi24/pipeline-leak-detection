@@ -1,0 +1,109 @@
+.dashboard-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fa;
+  color: #333;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #222;
+}
+
+/* Leak Status Card */
+.leak-status-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.leak-status-card.leak {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.leak-status-card.no-leak {
+  background-color: #52c41a;
+  color: white;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Hardware Status */
+.hardware-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hardware-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.status-indicator {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.status-indicator.active {
+  background-color: #52c41a;
+}
+
+.status-indicator.inactive {
+  background-color: #ff4d4f;
+}
+
+/* Alerts */
+.alerts-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.alert-item {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.alert-item.red {
+  background-color: #ff4d4f;
+}
+
+.alert-item.orange {
+  background-color: #fa8c16;
+}
+
+.alert-item.purple {
+  background-color: #722ed1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

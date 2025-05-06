@@ -1,0 +1,103 @@
+/* EquipmentFailure.css */
+
+.equipment-failure-container {
+    padding: 2rem;
+    background-image: url('./background-alerts.jpg');
+    background-size: cover;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+  
+  .equipment-failure-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0c0a0a;
+    margin-bottom: 2rem;
+  }
+  
+  .components-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  
+  .component-item {
+    background: linear-gradient(to bottom right, #ffffff, #e3f2fd);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1 1 220px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .component-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom right, #e1f5fe, #b3e5fc);
+  }
+  
+  .component-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #006064;
+  }
+  
+  .failure-details {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .failure-details h3 {
+    margin-top: 0;
+    color: #d84315;
+  }
+  
+  .failure-details p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #424242;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .component-item {
+      flex: 1 1 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .component-item {
+      flex: 1 1 100%;
+    }
+  
+    .failure-details {
+      padding: 1.2rem;
+    }
+  }
+  

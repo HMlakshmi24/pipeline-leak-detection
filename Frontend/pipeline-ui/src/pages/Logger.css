@@ -1,0 +1,49 @@
+/* Logger.css */
+.logger-page {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* same height offset as alerts */
+    background-image: url('./background-alerts.jpg'); /* reuse background */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .logger-card {
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .logger-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .logger-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .logger-card button {
+    padding: 0.7rem 1.4rem;
+    margin-top: 1.5rem;
+    background-color: #00ccff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .logger-card button:hover {
+    background-color: #009fcc;
+  }
+  

@@ -1,0 +1,79 @@
+.hardware-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hardware-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.check-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sensor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sensor-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-5px);
+}
+
+.sensor-card h3 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.status.ok {
+  color: green;
+}
+
+.status.disconnected {
+  color: red;
+}
+
+.sensor-actions button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sensor-actions button:hover {
+  background-color: #1f6392;
+}

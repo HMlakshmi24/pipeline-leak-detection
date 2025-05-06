@@ -1,0 +1,80 @@
+.page {
+  padding: 40px;
+  color: #161313;
+  min-height: 100vh;
+  background-image: url('../../public/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+  transition: all 0.3s ease;
+}
+
+/* ATM-card style */
+.small-card {
+  width: 600px;
+  min-height: 400px;
+}
+
+/* Tab buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tab-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-buttons button:hover {
+  background-color: #005e99;
+}
+
+.tab-buttons .active {
+  background-color: #00c3ff;
+  color: #000;
+}
+
+/* Content inside the card */
+.tab-content h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tab-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
