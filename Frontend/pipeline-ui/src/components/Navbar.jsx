@@ -43,7 +43,7 @@ export default function Navbar() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
-        <Link to="/predict">🔍 Dashboard</Link>
+        <Link to="/predict">🔍 Long Pipline Dashboard</Link>
         <Link to="/simulate">⚙️ Simulate</Link>
         <Link to="/check-hardware">🧪 Hardware</Link>
         <Link to="/alerts">🚨 Alerts</Link>
