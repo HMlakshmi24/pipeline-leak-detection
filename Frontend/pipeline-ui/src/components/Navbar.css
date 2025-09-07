@@ -16,7 +16,8 @@
 }
 
 .nav-links a,
-.more-btn {
+.more-btn,
+.auth-btn {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
@@ -25,10 +26,48 @@
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
 }
 
 .nav-links a:hover,
 .more-btn:hover {
   color: #00ccff;
+}
+
+.auth-btn {
+  background-color: #444;
+}
+
+.auth-btn:hover {
+  background-color: #00ccff;
+  color: #000;
+}
+
+.register-btn {
+  background-color: #008CBA;
+}
+
+.register-btn:hover {
+  background-color: #00bfff;
+  color: #000;
+}
+
+.login-btn {
+  background-color: #4CAF50;
+}
+
+.login-btn:hover {
+  background-color: #66ff66;
+  color: #000;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background-color: #ff6b6b;
+  color: #000;
 }

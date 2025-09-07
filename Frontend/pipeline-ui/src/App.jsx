@@ -8,6 +8,7 @@ import CheckHardware from './pages/CheckHardware';
 import Alerts from './pages/Alerts';
 import Logger from './pages/Logger';
 import EquipmentFailure from './pages/EquipmentFailure';
+import Visualize from './pages/Visualize';
 import { SimulationProvider } from "./SimulationContext";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/logger" element={<Logger />} />
             <Route path="/equipment-failure" element={<EquipmentFailure />} />
+            <Route path="/visualize" element={<Visualize />} />
           </Routes>
         </Router>
       </div>
