@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -12,6 +11,8 @@ export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [authMode, setAuthMode] = useState("login"); // "login" or "register"
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(prev => !prev);
@@ -21,20 +22,6 @@ export default function Navbar() {
     const savedLogin = localStorage.getItem("loggedIn");
     if (savedLogin === "true") setIsLoggedIn(true);
   }, []);
-
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (e.target.closest('.sidebar') === null && e.target.closest('.more-btn') === null) {
-        setSidebarOpen(false);
-      }
-    };
-    if (sidebarOpen) {
-      document.addEventListener('click', handleOutsideClick);
-    }
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [sidebarOpen]);
 
   const handleLogout = () => {
     localStorage.setItem("loggedIn", "false");
@@ -47,9 +34,9 @@ export default function Navbar() {
       <nav className="navbar">
         <h1>Pipeline Leak Detection</h1>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" className="navbar h1 ">Home</Link>
+          <button className="nav-btn" onClick={() => setAboutOpen(true)}>About</button>
+          <button className="nav-btn" onClick={() => setContactOpen(true)}>Contact</button>
 
           {!isLoggedIn ? (
             <>
@@ -79,6 +66,7 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         <Link to="/predict">🔍 Long Pipeline Dashboard</Link>
@@ -89,6 +77,36 @@ export default function Navbar() {
         <Link to="/logger">📝 Logger</Link>
         <Link to="/equipment-failure">⚠️ Equipment Failure</Link>
       </div>
+
+      {/* About Slide Panel */}
+      {aboutOpen && (
+        <div className="slide-panel">
+          <div className="slide-content">
+            <button className="close-btn" onClick={() => setAboutOpen(false)}>×</button>
+            <h2>About Us</h2>
+            <p>
+              We are a team committed to providing advanced pipeline leak detection using AI and real-time
+              data analysis. Our system combines CFD, RTTM, and modern UI/UX to simulate and detect leaks
+              with precision.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Contact Slide Panel */}
+      {contactOpen && (
+        <div className="slide-panel">
+          <div className="slide-content">
+            <button className="close-btn" onClick={() => setContactOpen(false)}>×</button>
+            <h2>Contact Us</h2>
+            <p>
+              📧 Email: demo@gmail.com <br />
+              📞 Phone: +91 98765 43210 <br />
+              📍 Address: Bengaluru, India
+            </p>
+          </div>
+        </div>
+      )}
 
       {showLoginModal && (
         <Login

@@ -1,7 +1,8 @@
+// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { HomePage, AboutPage, ContactPage } from './pages/Home'; // Updated imports
+import HomePage from './pages/Home';   // ✅ single default export now
 import Dashboard from './pages/Dashboard';
 import Simulate from './pages/Simulate';
 import CheckHardware from './pages/CheckHardware';
@@ -19,8 +20,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
             <Route path="/predict" element={<Dashboard />} />
             <Route path="/simulate/" element={<Simulate />} />
             <Route path="/check-hardware/" element={<CheckHardware />} />

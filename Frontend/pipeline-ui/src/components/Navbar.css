@@ -1,41 +1,54 @@
-/* src/components/Navbar.css */
 .navbar {
   background-color: #222;
   color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* vertical center everything */
   width: 100%;
   box-sizing: border-box;
 }
 
-.nav-links {
-  display: flex;
+.navbar h1 {
+  margin: 0; /* remove default top/bottom margin */
+  font-size: 1.5rem;
+  line-height: 1; /* prevent extra spacing */
+  display: inline-flex; /* inline flex for proper alignment */
   align-items: center;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center; /* vertical center all links/buttons */
+  gap: 1rem; /* consistent spacing between items */
+}
+
 .nav-links a,
+.nav-links .nav-btn,
 .more-btn,
 .auth-btn {
   color: white;
-  margin-left: 1rem;
   text-decoration: none;
   font-weight: bold;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 6px;
+  display: inline-flex; /* inline flex */
+  align-items: center;  /* vertical center text inside */
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
+.nav-links .nav-btn:hover,
 .more-btn:hover {
   color: #00ccff;
 }
 
+/* Auth buttons */
 .auth-btn {
   background-color: #444;
 }
@@ -70,4 +83,47 @@
 .logout-btn:hover {
   background-color: #ff6b6b;
   color: #000;
+}
+
+/* Slide Panel */
+.slide-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slide-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #00ccff;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.slide-panel .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
 }
