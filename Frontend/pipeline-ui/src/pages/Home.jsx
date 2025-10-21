@@ -13,7 +13,7 @@ export default function HomePage() {
           alt="Pipeline Landing" 
           style={{ 
             width: "100%", 
-            height: "100vh",   // full viewport height
+            height: "75vh",   // full viewport height
             objectFit: "cover" 
           }} 
         />

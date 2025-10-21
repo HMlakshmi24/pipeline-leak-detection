@@ -1,7 +1,7 @@
 .page {
-  padding: 40px;
+  padding: 20px;
   color: #161313;
-  min-height: 100vh;
+  min-height: 75vh;
   background-image: url('../../public/pipeline-landing.jpg');
   background-size: cover;
   background-position: center;

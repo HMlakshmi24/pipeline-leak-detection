@@ -100,7 +100,7 @@ export default function Navbar() {
             <button className="close-btn" onClick={() => setContactOpen(false)}>×</button>
             <h2>Contact Us</h2>
             <p>
-              📧 Email: demo@gmail.com <br />
+              📧 Email: hm.lakshmi@parijat.com <br />
               📞 Phone: +91 98765 43210 <br />
               📍 Address: Bengaluru, India
             </p>
